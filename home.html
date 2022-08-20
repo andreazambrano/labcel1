@@ -63,7 +63,6 @@
             <div
               class="is-scrollbar-hidden flex grow flex-col space-y-4 overflow-y-auto pt-6"
             >
-              <!-- Dashobards -->
             <!-- <a
                 href="dashboards-crm-analytics.html"
                 class="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-navy-600 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
@@ -178,7 +177,7 @@
 
               <!-- Forms -->
               <a
-                href="form-input-text.html"
+                href="#"
                 class="flex h-11 w-11 items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
                 x-tooltip.placement.right="'Egresos'"
               >
@@ -591,11 +590,9 @@
             </div>
 
             <!-- Sidebar Panel Body -->
-            <!-- <div
-              x-data="{expandedItem:null}"
+            <!-- <div x-data="{expandedItem:null}"
               class="h-[calc(100%-4.5rem)] overflow-x-hidden pb-6"
-              x-init="$el._x_simplebar = new SimpleBar($el);"
-            >
+              x-init="$el._x_simplebar = new SimpleBar($el);">
               <ul class="flex flex-1 flex-col px-4 font-inter">
                 <li x-init="$el.scrollIntoView({block: 'center'})">
                   <a
@@ -853,7 +850,7 @@
           <!-- Header Items -->
           <div class="flex w-full items-center justify-between">
             <!-- Left: Sidebar Toggle Button -->
-            <!-- <div class="h-7 w-7">
+            <div class="h-7 w-7">
               <button
                 class="menu-toggle ml-0.5 flex h-7 w-7 flex-col justify-center space-y-1.5 text-primary outline-none focus:outline-none dark:text-accent-light/80"
                 :class="$store.global.isSidebarExpanded && 'active'"
@@ -863,12 +860,12 @@
                 <span></span>
                 <span></span>
               </button>
-            </div> -->
+            </div>
 
             <!-- Right: Header buttons -->
             <div class="-mr-1.5 flex items-center space-x-1">
               <!-- Mobile Search Toggle -->
-              <button
+              <!-- <button
                 @click="$store.global.isSearchbarActive = !$store.global.isSearchbarActive"
                 class="btn h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25 sm:hidden"
               >
@@ -886,7 +883,7 @@
                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                   />
                 </svg>
-              </button>
+              </button> -->
 
               <!-- Main Searchbar -->
               <template x-if="$store.breakpoints.smAndUp">
@@ -1008,10 +1005,8 @@
                               Kanban
                             </p>
                           </a>
-                          <a
-                            href="dashboards-crm-analytics.html"
-                            class="w-14 text-center"
-                          >
+                          <a href="dashboards-crm-analytics.html"
+                            class="w-14 text-center">
                             <div class="avatar h-12 w-12">
                               <div
                                 class="is-initial rounded-full bg-secondary text-white"
@@ -2287,7 +2282,7 @@
             :class="activeTab === 'tabProjects' ? 'border-primary dark:border-accent text-primary dark:text-accent-light' : 'border-transparent hover:text-slate-800 focus:text-slate-800 dark:hover:text-navy-100 dark:focus:text-navy-100'"
             class="btn shrink-0 rounded-none border-b-2 px-3.5 py-2.5"
           >
-            Projects
+            Ventas
           </button>
           <button
             @click="activeTab = 'tabTasks'"
@@ -2790,7 +2785,7 @@
                     d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
                   />
                 </svg>
-                <span class="text-xs">Projects</span>
+                <span class="text-xs">Ventas</span>
               </p>
               <p
                 x-show="activeTab === 'tabActivity'"
@@ -2862,14 +2857,12 @@
                   </svg>
                 </span>
               </label>
-              <div class="mt-3">
-                <h2
-                  class="px-3 text-xs+ font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100"
+             <!--  <div class="mt-3">
+                <h2 class="px-3 text-xs+ font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100"
                 >
                   Banking cards
                 </h2>
-                <div
-                  class="swiper mt-3 px-3"
+                <div class="swiper mt-3 px-3"
                   x-init="$nextTick(()=>new Swiper($el,{  slidesPerView: 'auto', spaceBetween: 16}))"
                 >
                   <div class="swiper-wrapper">
@@ -2891,19 +2884,13 @@
                           **** **** **** 8945
                         </p>
                       </div>
-                      <div
-                        class="mask is-reuleaux-triangle absolute top-0 right-0 -m-3 h-16 w-16 bg-white/20"
+                      <div class="mask is-reuleaux-triangle absolute top-0 right-0 -m-3 h-16 w-16 bg-white/20"
                       ></div>
                     </div>
-                    <div
-                      class="swiper-slide relative flex h-28 w-48 flex-col overflow-hidden rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 p-3"
+                    <div class="swiper-slide relative flex h-28 w-48 flex-col overflow-hidden rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 p-3"
                     >
                       <div class="grow">
-                        <img
-                          class="h-3"
-                          src="images/payments/cc-visa-white.svg"
-                          alt="image"
-                        />
+                        <img  class="h-3" src="images/payments/cc-visa-white.svg" alt="image"/>
                       </div>
                       <div class="text-white">
                         <p class="text-lg font-semibold tracking-wide">
@@ -2913,13 +2900,9 @@
                           **** **** **** 8945
                         </p>
                       </div>
-                      <div
-                        class="mask is-diamond absolute bottom-0 right-0 -m-3 h-16 w-16 bg-white/20"
-                      ></div>
+                      <div class="mask is-diamond absolute bottom-0 right-0 -m-3 h-16 w-16 bg-white/20"></div>
                     </div>
-                    <div
-                      class="swiper-slide relative flex h-28 w-48 flex-col overflow-hidden rounded-xl bg-gradient-to-br from-info to-info-focus p-3"
-                    >
+                    <div class="swiper-slide relative flex h-28 w-48 flex-col overflow-hidden rounded-xl bg-gradient-to-br from-info to-info-focus p-3">
                       <div class="grow">
                         <img
                           class="h-3"
@@ -2941,9 +2924,9 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
-              <div class="mt-4 px-3">
+              <!-- <div class="mt-4 px-3">
                 <h2
                   class="text-xs+ font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100"
                 >
@@ -3090,7 +3073,7 @@
                     </p>
                   </a>
                 </div>
-              </div>
+              </div> -->
 
               <div class="mt-4">
                 <div class="grid grid-cols-2 gap-3 px-3">
@@ -3119,7 +3102,7 @@
                       </svg>
                     </div>
 
-                    <p class="mt-0.5 text-tiny+ uppercase">Working Hours</p>
+                    <p class="mt-0.5 text-tiny+ uppercase">Egresos</p>
 
                     <div
                       class="progress mt-3 h-1.5 bg-secondary/15 dark:bg-secondary-light/25"
@@ -3183,7 +3166,7 @@
                       </svg>
                     </div>
 
-                    <p class="mt-0.5 text-tiny+ uppercase">Completed tasks</p>
+                    <p class="mt-0.5 text-tiny+ uppercase">Ingreso</p>
 
                     <div
                       class="progress mt-3 h-1.5 bg-success/15 dark:bg-success/25"
@@ -3225,7 +3208,7 @@
                 </div>
               </div>
 
-              <div class="mt-4">
+              <!-- <div class="mt-4">
                 <h2
                   class="px-3 text-xs+ font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100"
                 >
@@ -3545,7 +3528,7 @@
                     />
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <div class="mt-3 px-3">
                 <h2
@@ -3562,49 +3545,19 @@
                     />
                     <span>Dark Mode</span>
                   </label>
-                  <label class="inline-flex items-center space-x-2">
-                    <input
-                      x-model="$store.global.isMonochromeModeEnabled"
-                      class="form-switch h-5 w-10 rounded-lg bg-slate-300 before:rounded-md before:bg-slate-50 checked:bg-slate-500 checked:before:bg-white dark:bg-navy-900 dark:before:bg-navy-300 dark:checked:bg-navy-400 dark:checked:before:bg-white"
-                      type="checkbox"
-                    />
-                    <span>Monochrome Mode</span>
-                  </label>
+                  
                 </div>
               </div>
 
-              <div class="mt-3 px-3">
-                <div class="rounded-lg bg-slate-100 p-3 dark:bg-navy-600">
-                  <div class="flex items-center justify-between">
-                    <p>
-                      <span
-                        class="font-medium text-slate-600 dark:text-navy-100"
-                        >35GB</span
-                      >
-                      of 1TB
-                    </p>
-                    <a
-                      href="index.html#"
-                      class="text-xs+ font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70"
-                      >Upgrade</a
-                    >
-                  </div>
-
-                  <div class="progress mt-2 h-2 bg-slate-150 dark:bg-navy-500">
-                    <div class="w-7/12 rounded-full bg-info"></div>
-                  </div>
-                </div>
-              </div>
+              
               <div class="h-18"></div>
             </div>
 
-            <div
-              x-show="activeTab === 'tabProjects'"
+            <div x-show="activeTab === 'tabProjects'"
               x-transition:enter="transition-all duration-500 easy-in-out"
               x-transition:enter-start="opacity-0 [transform:translate3d(0,1rem,0)]"
               x-transition:enter-end="opacity-100 [transform:translate3d(0,0,0)]"
-              class="is-scrollbar-hidden overflow-y-auto overscroll-contain px-3 pt-1"
-            >
+              class="is-scrollbar-hidden overflow-y-auto overscroll-contain px-3 pt-1">
               <div class="grid grid-cols-2 gap-3">
                 <div class="rounded-lg bg-slate-100 p-3 dark:bg-navy-600">
                   <div class="flex justify-between space-x-1">
@@ -3680,15 +3633,12 @@
                 </div>
               </div>
 
-              <div
-                class="mt-4 rounded-lg border border-slate-150 p-3 dark:border-navy-600"
+              <div class="mt-4 rounded-lg border border-slate-150 p-3 dark:border-navy-600"
               >
                 <div class="flex items-center space-x-3">
-                  <img
-                    class="h-10 w-10 rounded-lg object-cover object-center"
+                  <img class="h-10 w-10 rounded-lg object-cover object-center"
                     src="images/illustrations/lms-ui.svg"
-                    alt="image"
-                  />
+                    alt="image"/>
                   <div>
                     <p
                       class="font-medium leading-snug text-slate-700 dark:text-navy-100"
@@ -4346,9 +4296,7 @@
               <div class="h-18"></div>
             </div>
 
-            <div
-              class="pointer-events-none absolute bottom-4 flex w-full justify-center"
-            >
+            <!-- <div class="pointer-events-none absolute bottom-4 flex w-full justify-center">
               <div
                 class="pointer-events-auto mx-auto flex space-x-1 rounded-full border border-slate-150 bg-white px-4 py-0.5 shadow-lg dark:border-navy-700 dark:bg-navy-900"
               >
@@ -4454,7 +4402,7 @@
                   </svg>
                 </button>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -4482,7 +4430,7 @@
                   <p
                     class="mt-3 text-base font-medium tracking-wide text-indigo-100"
                   >
-                    Earnings
+                    Balance
                   </p>
                   <p class="mt-4 font-inter text-2xl font-semibold">
                     <span class="text-indigo-100">$</span>
@@ -4491,7 +4439,7 @@
                   <div
                     class="badge mt-2 rounded-full bg-black/20 text-indigo-50"
                   >
-                    13 Members
+                    Sucursal
                   </div>
                 </div>
                 <div
@@ -4515,7 +4463,7 @@
                       >
                         56
                       </p>
-                      <p class="text-xs+ line-clamp-1">Projects</p>
+                      <p class="text-xs+ line-clamp-1">Ventas</p>
                     </div>
                     <div
                       class="mask is-star flex h-10 w-10 shrink-0 items-center justify-center bg-success"
@@ -4564,7 +4512,7 @@
                       >
                         324
                       </p>
-                      <p class="text-xs+ line-clamp-1">Total hours</p>
+                      <p class="text-xs+ line-clamp-1">Egresos</p>
                     </div>
                     <div
                       class="mask is-star flex h-10 w-10 shrink-0 items-center justify-center bg-info"
@@ -4605,7 +4553,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card justify-center p-4.5">
+                <!-- <div class="card justify-center p-4.5">
                   <div class="flex items-center justify-between">
                     <div>
                       <p
@@ -4613,7 +4561,7 @@
                       >
                         7
                       </p>
-                      <p class="text-xs+ line-clamp-1">Support Ticket</p>
+                      <p class="text-xs+ line-clamp-1"></p>
                     </div>
                     <div
                       class="mask is-star flex h-10 w-10 shrink-0 items-center justify-center bg-secondary"
@@ -4708,7 +4656,7 @@
                       </svg>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
             <div>
@@ -4724,12 +4672,12 @@
                   <h2
                     class="font-medium tracking-wide text-slate-700 dark:text-navy-100"
                   >
-                    Recent Payments
+                    Ultimas ventas
                   </h2>
                   <a
-                    href="dashboards-personal.html#"
+                    href="#"
                     class="border-b border-dotted border-current pb-0.5 text-xs+ font-medium text-primary outline-none transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70"
-                    >View All</a
+                    >Ver reportes</a
                   >
                 </div>
                 <div class="space-y-3.5">
